@@ -9,33 +9,19 @@
     "FrScTe7": "From Scratch Tests getDoctorAndAppointments - returns a doctor and their appointments",
     "FrScTe8": "From Scratch Tests getAppointmentDatesByPatient - returns an array of appointment dates for a given patient",
     "FrScTe9": "From Scratch Tests getAppointmentsAndPatientsByDoctorId - returns an array of doctors with their appointments and patients",
-    "FrScTe10": "From Scratch Tests getPatientsByDoctorId - returns an array of patients for a given doctor",
-    "FrScTe11": "From Scratch Tests currentCongressGenerationsAndAgesCounts - returns only the chamber with the oldest average age"
+    "FrScTe10": "From Scratch Tests getPatientsByDoctorId - returns an array of patients for a given doctor"
   },
   "testNameToIdHash": {
-    "From Scratch Tests Requires the database and table to have been restored somehow with all members of congress": "FrScTe1",
-    "From Scratch Tests countAllMembers - Returns only the number of members": "FrScTe2",
-    "From Scratch Tests countAllMembersAliased - Returns the aliased count": "FrScTe3",
-    "From Scratch Tests countByParty - Counts the members of all 3 parties": "FrScTe4",
-    "From Scratch Tests avgAgeAllMembersRounded - Returns the age of ALL members rounded to the nearest INT": "FrScTe5",
-    "From Scratch Tests avgAgeByCongressOrdered - gets the average age of each congress rounded and ordered by congress ascending": "FrScTe6",
-    "From Scratch Tests oldestAge - returns the oldest age of a congress member": "FrScTe7",
-    "From Scratch Tests youngestAgeIndependent - returns the youngest age of an independent party member": "FrScTe8",
-    "From Scratch Tests oldestMember - returns the selected properties of the oldest member of congress": "FrScTe9",
-    "From Scratch Tests oldestChamber - returns only the chamber with the oldest average age": "FrScTe10",
-    "From Scratch Tests currentCongressGenerationsAndAgesCounts - returns only the chamber with the oldest average age": "FrScTe11",
     "From Scratch Tests createDoctorsTable - creates a doctors table": "FrScTe1",
     "From Scratch Tests createPatientsTable - creates a doctors table": "FrScTe2",
-    "From Scratch Tests createAppointmentsTable - creates a doctors table": "FrScTe3",
-    "From Scratch Tests createAppointmentsTable - creates an appointments table": "FrScTe3",
     "From Scratch Tests createAppointmentsTable - creates an appointments table that's linked properly to the doctors and appointments table": "FrScTe3",
     "From Scratch Tests addDoctor - adds a doctor to the doctors table": "FrScTe4",
     "From Scratch Tests addPatient - adds a patient to the patients table": "FrScTe5",
     "From Scratch Tests addAppointment - adds an appointment to the appointments table": "FrScTe6",
     "From Scratch Tests getDoctorAndAppointments - returns a doctor and their appointments": "FrScTe7",
     "From Scratch Tests getAppointmentDatesByPatient - returns an array of appointment dates for a given patient": "FrScTe8",
-    "From Scratch Tests getPatientsByDoctorId - returns an array of patients for a given doctor": "FrScTe10",
-    "From Scratch Tests getAppointmentsAndPatientsByDoctorId - returns an array of doctors with their appointments and patients": "FrScTe9"
+    "From Scratch Tests getAppointmentsAndPatientsByDoctorId - returns an array of doctors with their appointments and patients": "FrScTe9",
+    "From Scratch Tests getPatientsByDoctorId - returns an array of patients for a given doctor": "FrScTe10"
   },
   "testScores": {
     "From Scratch Tests": {
