@@ -1,4 +1,4 @@
-# 6.0.2 Assignment: Relationships and joins!
+# Relationships and Joins
 - [6.0.2 Assignment: Relationships and joins!](#602-assignment-relationships-and-joins)
 - [Before Getting started](#before-getting-started)
   - [Knex](#knex)
