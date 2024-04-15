@@ -1,30 +1,27 @@
 # Relationships and Joins
-- [Before Getting started](#before-getting-started)
-  - [Knex](#knex)
-- [Part 1: The tables](#part-1-the-tables)
-  - [Question 1: createDoctorsTable](#question-1-createdoctorstable)
-  - [Question 2: createPatientsTable](#question-2-createpatientstable)
-  - [Question 3: createAppointmentsTable](#question-3-createappointmentstable)
-- [Part 2: The data](#part-2-the-data)
-  - [Question 4: addDoctor](#question-4-adddoctor)
-  - [Question 5: addPatient](#question-5-addpatient)
-  - [Question 6: addAppointment](#question-6-addappointment)
-- [Part 3: The Joins!](#part-3-the-joins)
-  - [Question 7: getDoctorAndAppointments](#question-7-getdoctorandappointments)
-  - [Question 8: getAppointmentDatesByPatient](#question-8-getappointmentdatesbypatient)
-  - [Question 9: getAppointmentsAndPatientsByDoctorId](#question-9-getappointmentsandpatientsbydoctorid)
-  - [Question 10: getPatientsByDoctorId](#question-10-getpatientsbydoctorid)
+- [Knex](#knex)
+- [Question 1: createDoctorsTable](#question-1-createdoctorstable)
+- [Question 2: createPatientsTable](#question-2-createpatientstable)
+- [Question 3: createAppointmentsTable](#question-3-createappointmentstable)
+- [Question 4: addDoctor](#question-4-adddoctor)
+- [Question 5: addPatient](#question-5-addpatient)
+- [Question 6: addAppointment](#question-6-addappointment)
+- [Question 7: getDoctorAndAppointments](#question-7-getdoctorandappointments)
+- [Question 8: getAppointmentDatesByPatient](#question-8-getappointmentdatesbypatient)
+- [Question 9: getAppointmentsAndPatientsByDoctorId](#question-9-getappointmentsandpatientsbydoctorid)
+- [Question 10: getPatientsByDoctorId](#question-10-getpatientsbydoctorid)
 
-# Before Getting started
-We'll be practicing our joins today with doctors, patients, and the appointments that link them! This assignment is about teaching you to write these joins yourself, it's not trying to do anything complex. We're just making sure you're aware of the syntax. It's up to you to push yourself on your own to go further!
+# Before Getting Started
 
-Remember, a parent has many children, and each child belongs to an adult. So a doctor has many appointments, and each appointment belongs to a doctor. A patient also has many appointments and each appointment belongs to a patient.
+This assignment is about giving you the chance you to write these joins yourself, it's not trying to do anything complex. We're just making sure you're aware of the syntax — it's up to you to push yourself on your own to go further!
 
-Ok? that's the start, now carry it through. So according to that, then a doctor has many patients *through* appointments, and it's also true that each patient can have many doctors *through* appointments as well. The appointments table is the child, and it links the two parents together.
+We'll be practicing our joins today with `doctors`, `patients`, and the `appointments` that link them! These three tables are going to create a **many-to-many** relationship between `doctors` and `patients`: A doctor can have many patients and a patient can have many doctors. This relationship is captured in a third table called `appointments`.
 
-Now what important is that doctors and patients don't know a thing about each other. The only thing linking them together are the rows on the appointments table. And how does the appointments table do that? By storing the "foreign keys" on it.
+Compare and contrast these tables with the `students`-`enrollments`-`classes` tables in the ERD below:
 
-This is all just a review, and if it doesn't quite click, please spend some time with AI or Google so you understand the concepts. Remember, always understand the core ideas before jumping into code!
+![](./img/labeled-erd.png)
+
+What is important is that `doctors` and `patients` tables on their own don't know a thing about each other. The only thing linking them together are the rows on the `appointments` table. And how does the appointments table do that? By storing the "foreign keys" on it.
 
 ## Knex
 So we're using knex again to allow our JS files to talk to our database like we always do! Just like last time, we need you to make a copy of `.env.template` as `.env` and fill it with the values you need!
