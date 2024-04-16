@@ -53,7 +53,7 @@ Ok, this is where it gets tricky. Our `appointments` table is the association (o
 It should also have two foreign keys: `doctor_id` and `patient_id` which you can do like this:
 
 ```sql
-some_table_id INTEGER REFERENCES some_table
+some_table_id INTEGER REFERENCES some_table,
 some_other_table_id INTEGER REFERENCES some_other_table
 ```
 
@@ -63,13 +63,15 @@ There are many ways to link tables, but this is a pretty simple way to start tha
 Ok, with our tables set up properly, now we need to add some data to them! Remember, when using `knex.raw` we have to interpolate arguments to add data. Check this template and apply it to your code:
 
 ```js
-const query = `INSERT INTO cats (name, age) VALUES (?, ?)`;
+const query = `INSERT INTO cats (name, age) VALUES (?, ?) RETURNING *`;
 knex.raw(query, ['Tom', 12]);
 // that would create the sql query:
-// INSERT INTO cats (name, age) VALUES ('Tom', 12)
+// INSERT INTO cats (name, age) VALUES ('Tom', 12) RETURNING *;
 ```
 
 Remember, the order of inserted values matters! So make sure you're putting them in the right order for the `?` placeholders to make sense.
+
+The `RETURNING *` bit of the query causes the `INSERT` statement to return the newly inserted row. Without it, an `INSERT` statement doesn't return anything!
 
 
 ## Question 4: addDoctor
