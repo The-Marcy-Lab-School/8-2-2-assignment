@@ -94,7 +94,7 @@ As you know, a "many to many" relationship is really just two "has many/belongs 
 To do this let's write `getDoctorAndAppointments`, and it takes in a doctor id as an argument. Your task is to use a single `JOIN` and return the rows with the following data:
 
 - all columns on the `doctors` table
-- appointments.data
+- appointments.date
 - appointments.patient_id
 
 You do not need anything else from the appointments table for this query.
