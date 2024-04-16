@@ -48,7 +48,7 @@ Make a SQL query that creates a table `doctors`, with an `id`, `title`, and `spe
 Make a SQL query that creates a table `patients`, with an `id`, `name`, and `age` column. The `id` column should be a primary key, the `name` is text and the `age` columns should be an integer.
 
 ## Question 3: createAppointmentsTable
-Ok, this is where it gets tricky. Our `appointments` table is the "join" table that links doctors to patients? It need to have `data` column (that's just text to keep things simple) and an `id` primary key column of it's own.
+Ok, this is where it gets tricky. Our `appointments` table is the association (or "junction") table that links doctors to patients. It need to have `data` column (that's just text to keep things simple) and an `id` primary key column of it's own.
 
 But in order to link it to the other two with official foreign keys, you need to do something like this:
 
