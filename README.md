@@ -48,18 +48,16 @@ Make a SQL query that creates a table `doctors`, with an `id`, `title`, and `spe
 Make a SQL query that creates a table `patients`, with an `id`, `name`, and `age` column. The `id` column should be a primary key, the `name` is text and the `age` columns should be an integer.
 
 ## Question 3: createAppointmentsTable
-Ok, this is where it gets tricky. Our `appointments` table is the association (or "junction") table that links doctors to patients. It need to have `data` column (that's just text to keep things simple) and an `id` primary key column of it's own.
+Ok, this is where it gets tricky. Our `appointments` table is the association (or "junction") table that links doctors to patients. It needs to have text `date` column and an `id` primary key column of it's own.
 
-But in order to link it to the other two with official foreign keys, you need to do something like this:
+It should also have two foreign keys: `doctor_id` and `patient_id` which you can do like this:
 
 ```sql
 some_table_id INTEGER REFERENCES some_table
 some_other_table_id INTEGER REFERENCES some_other_table
 ```
 
-There are many ways to link tables, but this is a pretty simple way to start that works as long as the other tables have a proper primary key `id` column.
-
-So apply that to your tables and you should be all set!
+There are many ways to link tables, but this is a pretty simple way to start that works as long as the other tables have a primary key column called `id`.
 
 # Part 2: The data
 Ok, with our tables set up properly, now we need to add some data to them! Remember, when using `knex.raw` we have to interpolate arguments to add data. Check this template and apply it to your code:
